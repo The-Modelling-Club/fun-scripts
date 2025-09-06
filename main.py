@@ -9,7 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
-# Parametric equations for the heart shape
 def heart_shape(t):
     x = 16 * np.sin(t)**3
     y = 13 * np.cos(t) - 5 * np.cos(2*t) - 2 * np.cos(3*t) - np.cos(4*t)
@@ -47,6 +46,5 @@ ax.axis('off')
 
 ani = animation.FuncAnimation(fig, update, frames=100, interval=50, blit=False)
 
-# Save the animation to the directory.
 ani.save('animated_love_tmc.gif', writer='pillow')
 plt.show()
